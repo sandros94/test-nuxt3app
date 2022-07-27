@@ -2,14 +2,13 @@
 
 ### Cosa ha funzionato fin ora:
 
-`npm install nuxt-directus @nuxtjs/tailwindcss tailwind-config-viewer`
+`npm install nuxt-directus @nuxtjs/tailwindcss`
 
 package.json
 ```
 "dependencies": {
     "@nuxtjs/tailwindcss": "^5.3.1",
     "nuxt-directus": "^2.3.0",
-    "tailwind-config-viewer": "^1.7.1"
   }
 ```
 
