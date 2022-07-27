@@ -4,6 +4,23 @@
 
 `npm install nuxt-directus @nuxtjs/tailwindcss tailwind-config-viewer`
 
+nuxt.config.ts
+```
+export default defineNuxtConfig({
+    modules: ['nuxt-directus', '@nuxtjs/tailwindcss'],
+    tailwindcss: {
+        cssPath: '~/assets/css/tailwind.css',
+        configPath: 'tailwind.config.ts',
+        exposeConfig: false,
+        injectPosition: 0,
+        viewer: true,
+    },
+    directus: {
+        url: "https://directus.digitool.media",
+    }
+})
+```
+
 package.json
 ```
 "dependencies": {

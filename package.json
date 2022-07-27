@@ -8,5 +8,10 @@
   },
   "devDependencies": {
     "nuxt": "3.0.0-rc.6"
+  },
+  "dependencies": {
+    "@nuxtjs/tailwindcss": "^5.3.1",
+    "nuxt-directus": "^2.3.0",
+    "tailwind-config-viewer": "^1.7.1"
   }
 }
