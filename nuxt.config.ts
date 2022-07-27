@@ -5,7 +5,7 @@ export default defineNuxtConfig({
     modules: ['nuxt-directus', '@nuxtjs/tailwindcss'],
     tailwindcss: {
         cssPath: '~/assets/css/tailwind.css',
-        configPath: 'tailwind.config.ts',
+        configPath: 'tailwind.config.js',
         exposeConfig: false,
         injectPosition: 0,
         viewer: true,
