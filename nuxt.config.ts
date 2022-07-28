@@ -1,4 +1,6 @@
-export default {
+import { defineNuxtConfig } from 'nuxt'
+
+export default defineNuxtConfig ({
     buildModules: ['@nuxtjs/tailwindcss'],
     modules: ['nuxt-directus'],
     ssr: true,
@@ -7,9 +9,9 @@ export default {
         configPath: 'tailwind.config.js',
         exposeConfig: false,
         injectPosition: 0,
-        viewer: true,
+        viewer: false,
     },
     directus: {
         url: "https://directus.digitool.media",
     }
-}
+})
