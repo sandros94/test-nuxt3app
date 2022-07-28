@@ -1,6 +1,4 @@
-import { defineNuxtConfig } from 'nuxt'
-
-export default defineNuxtConfig ({
+export default ({
     modules: ['nuxt-directus'],
     typescript: {
         shim: false
