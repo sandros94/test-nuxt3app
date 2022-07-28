@@ -6,10 +6,6 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview"
   },
-  "devDependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.1",
-    "nuxt": "3.0.0-rc.6"
-  },
   "dependencies": {
     "nuxt-directus": "^2.3.0"
   }

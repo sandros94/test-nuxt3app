@@ -1,5 +1,5 @@
 <template>
-	<div class="text-black">
-		<h2>Ciao mondo! 👌</h2>
+	<div>
+		<h2>Ciao mondo 2! 👌</h2>
 	</div>
 </template>
