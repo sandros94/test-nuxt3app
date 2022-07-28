@@ -1,5 +1,5 @@
 export default ({
-    modules: ['nuxt-directus'],
+    modules: ['nuxt-directus','@nuxtjs/tailwindcss'],
     typescript: {
         shim: false
     },
