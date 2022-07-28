@@ -1,7 +1,6 @@
-import { defineNuxtConfig } from 'nuxt'
-
-export default defineNuxtConfig({
-    modules: ['nuxt-directus', '@nuxtjs/tailwindcss'],
+export default {
+    buildModules: ['@nuxtjs/tailwindcss'],
+    modules: ['nuxt-directus'],
     ssr: true,
     tailwindcss: {
         cssPath: 'assets/css/tailwind.css',
@@ -13,4 +12,4 @@ export default defineNuxtConfig({
     directus: {
         url: "https://directus.digitool.media",
     }
-})
+}
