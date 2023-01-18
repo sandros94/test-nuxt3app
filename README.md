@@ -2,31 +2,13 @@
 
 ### Cosa ha funzionato fin ora:
 
-`npm install nuxt-directus @nuxtjs/tailwindcss tailwind-config-viewer`
-
-nuxt.config.ts
-```
-export default defineNuxtConfig({
-    modules: ['nuxt-directus', '@nuxtjs/tailwindcss'],
-    tailwindcss: {
-        cssPath: '~/assets/css/tailwind.css',
-        configPath: 'tailwind.config.ts',
-        exposeConfig: false,
-        injectPosition: 0,
-        viewer: true,
-    },
-    directus: {
-        url: "https://directus.digitool.media",
-    }
-})
-```
+`npm install nuxt-directus @nuxtjs/tailwindcss`
 
 package.json
 ```
 "dependencies": {
     "@nuxtjs/tailwindcss": "^5.3.1",
     "nuxt-directus": "^2.3.0",
-    "tailwind-config-viewer": "^1.7.1"
   }
 ```
 
