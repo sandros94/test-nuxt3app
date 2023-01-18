@@ -1,18 +1,30 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default({
-    buildModules: ['@nuxtjs/html-validator','@nuxtjs/google-fonts'],
-    modules: ['@nuxtjs/tailwindcss','@nuxt/image-edge',],
+    modules: [
+        '@nuxtjs/tailwindcss',
+        'nuxt-headlessui'
+    ],
+    nitro: {
+        compressPublicAssets: true,
+        prerender: {
+            crawlLinks: true,
+        },
+    },
     typescript: {
         shim: false
     },
-    css: [
-        '@/assets/css/main.css',
-    ],
     tailwindcss: {
         // Options
     },
-    directus: {
-        url: 'https://directus.digitool.media/'
-        // token: ''
+    headlessui: {
+        // Options
     },
+    app: {
+        head: {
+            title: 'Website',
+            htmlAttrs: {
+                lang: 'en'
+            }
+        },
+    }
 });
