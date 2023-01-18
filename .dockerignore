@@ -1,0 +1,19 @@
+node_modules
+npm-debug.log
+package-lock.json
+*.log*
+.git
+.nuxt
+.nitro
+.cache
+.output
+*.env
+!.env
+dist
+.vscode
+.devcontainer
+
+# OSX
+.DS_Store
+.AppleDouble
+.LSOverride
