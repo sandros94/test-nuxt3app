@@ -3,3 +3,4 @@ dockerfile
 .devcontainer
 *.env
 !.env
+.vscode

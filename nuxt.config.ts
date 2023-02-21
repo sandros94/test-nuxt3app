@@ -1,8 +1,8 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default({
     modules: [
-        '@nuxtjs/tailwindcss',
-        'nuxt-headlessui'
+        '@anu-vue/nuxt',
+        '@unocss/nuxt'
     ],
     nitro: {
         compressPublicAssets: true,
@@ -13,12 +13,9 @@ export default({
     typescript: {
         shim: false
     },
-    tailwindcss: {
-        // Options
-    },
-    headlessui: {
-        // Options
-    },
+    css: [
+        '@anu-vue/preset-theme-default/dist/style.css'
+    ],
     app: {
         head: {
             title: 'Website',

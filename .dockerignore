@@ -12,6 +12,7 @@ package-lock.json
 dist
 .vscode
 .devcontainer
+.github
 
 # OSX
 .DS_Store

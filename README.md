@@ -1,57 +1,15 @@
-# test-nuxt3app
+# What am I looking at?
+This is a small personal sandbox/boilerplate for a minimal nuxt app.
+By minimal I mean with the minimum tools I need to fulfill my current projects.
 
-### Cosa ha funzionato fin ora:
 
-`npm install nuxt-directus @nuxtjs/tailwindcss`
+# Old readme
+this are lines from the old readme that I need revisit and cleanup
 
-package.json
-```
-"dependencies": {
-    "@nuxtjs/tailwindcss": "^5.3.1",
-    "nuxt-directus": "^2.3.0",
-  }
-```
-
-tailwind.config.ts
-```
-import { Config } from 'tailwindcss'
-
-export default <Config> {
-  theme: {
-    extend: {}
-  },
-}
-```
-
-# Nuxt 3 Minimal Starter
-
+## Nuxt 3 Minimal Starter
 Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
 
-## Setup
-
-Make sure to install the dependencies:
-
-```bash
-# yarn
-yarn install
-
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-npm run dev
-```
-
 ## Production
-
 Build the application for production:
 
 ```bash
