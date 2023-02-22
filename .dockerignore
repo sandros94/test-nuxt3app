@@ -1,7 +1,8 @@
 node_modules
+npm-debug.log
 package-lock.json
 *.log*
-.npm
+.git
 .nuxt
 .nitro
 .cache
@@ -10,6 +11,8 @@ package-lock.json
 !.env
 dist
 .vscode
+.devcontainer
+.github
 
 # OSX
 .DS_Store
