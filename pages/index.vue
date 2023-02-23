@@ -27,8 +27,6 @@
 		<h1>colorMode.preference: {{ colorMode.preference }}</h1>
 		<p>Is Dark? {{ colorMode.value == 'dark' }} {{ typeof colorMode.value }}</p>
 		<p>themeToggle: {{ themeToggle }} {{ typeof themeToggle }}</p>
-		<p>Test: {{ test }}</p>
-		<p>{{ colorMode }}</p>
 
 		<!-- Cards -->
 		<div class="grid-row sm:grid-cols-2 cards-demo-container">
@@ -62,8 +60,8 @@ body {
 </style>
 
 <script setup>
-const themeToggle = ref(false)
-const colorMode = useColorMode()
+const colorMode = useColorMode();
+const themeToggle = ref(colorMode.value === 'dark');
 
 watch(themeToggle, (newValue) => {
 	colorMode.preference = newValue ? 'dark' : 'light'
