@@ -4,23 +4,23 @@
 		<div class="w-full flex flex-wrap justify-between item-center mb-8">
 			<div class="flex flex-wrap gap-4">
 				<ABtn>Primary</ABtn>
-				
+
 				<ABtn color="secondary">Secondary</ABtn>
-				
+
 				<ABtn color="success"> Success </ABtn>
-				
+
 				<ABtn color="info"> Info </ABtn>
-				
+
 				<ABtn color="warning"> Warning </ABtn>
-				
+
 				<ABtn color="danger"> Danger </ABtn>
 			</div>
 			<div class="flex flex-wrap gap-4 my-8">
-				<ARadio v-model="colorMode.preference" value="system" label="System"/>
-				<ARadio v-model="colorMode.preference" value="light" label="Light"/>
-				<ARadio v-model="colorMode.preference" value="dark" label="Dark"/>
+				<ARadio v-model="colorMode.preference" value="system" label="System" />
+				<ARadio v-model="colorMode.preference" value="light" label="Light" />
+				<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
 			</div>
-			<ASwitch v-model="themeToggle" @click="switchTheme"/>
+			<ASwitch v-model="themeToggle" />
 		</div>
 
 		<h1>colorMode.value: {{ colorMode.value }}</h1>
@@ -29,7 +29,7 @@
 		<p>themeToggle: {{ themeToggle }} {{ typeof themeToggle }}</p>
 		<p>Test: {{ test }}</p>
 		<p>{{ colorMode }}</p>
-		
+
 		<!-- Cards -->
 		<div class="grid-row sm:grid-cols-2 cards-demo-container">
 			<!-- 👉 Using props -->
@@ -61,16 +61,18 @@ body {
 }
 </style>
 
-<script setup>
-const colorMode = useColorMode()
-let themeToggle = ref(false)
-const switchTheme = function(){
-	if (themeToggle) {
-		colorMode.preference = 'dark'
-	} else {
-		colorMode.preference = 'light'
-	}
+<script>
+export default {
+	data() {
+		return {
+			themeToggle: false,
+			colorMode: useColorMode()
+		}
+	},
+	watch: {
+		themeToggle(newValue) {
+			this.colorMode.preference = newValue ? 'dark' : 'light';
+		}
+	},
 }
-// colorMode.preference = (themeToggle === true) ? "dark" : "light"
-// let test = (themeToggle !== true) ? "dark" : "light"
 </script>
