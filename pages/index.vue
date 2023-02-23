@@ -61,18 +61,11 @@ body {
 }
 </style>
 
-<script>
-export default {
-	data() {
-		return {
-			themeToggle: false,
-			colorMode: useColorMode()
-		}
-	},
-	watch: {
-		themeToggle(newValue) {
-			this.colorMode.preference = newValue ? 'dark' : 'light';
-		}
-	},
-}
+<script setup>
+const themeToggle = ref(false)
+const colorMode = useColorMode()
+
+watch(themeToggle, (newValue) => {
+	colorMode.preference = newValue ? 'dark' : 'light'
+})
 </script>
