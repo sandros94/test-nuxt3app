@@ -2,7 +2,8 @@
 export default({
     modules: [
         '@anu-vue/nuxt',
-        '@unocss/nuxt'
+        '@unocss/nuxt',
+        '@nuxtjs/color-mode'
     ],
     nitro: {
         compressPublicAssets: true,
@@ -16,6 +17,11 @@ export default({
     css: [
         '@anu-vue/preset-theme-default/dist/style.css'
     ],
+    colorMode: {
+        preference: 'system',
+        fallback: 'light',
+        classSuffix: '',
+    },
     app: {
         head: {
             title: 'Website',
