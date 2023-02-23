@@ -21,6 +21,7 @@
 				<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
 			</div>
 			<ASwitch v-model="themeToggle" />
+			<input v-model="colorMode.preference" true-value="dark" false-value="light" type="checkbox" />
 		</div>
 
 		<h1>colorMode.value: {{ colorMode.value }}</h1>
