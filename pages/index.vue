@@ -21,6 +21,8 @@
 				<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
 			</div>
 			<ASwitch v-model="themeToggle" />
+			<input v-model="themeToggle" type="checkbox" />
+			<Test v-model="colorMode.preference" true-value="dark" false-value="light" />
 			<input v-model="colorMode.preference" true-value="dark" false-value="light" type="checkbox" />
 		</div>
 
@@ -35,7 +37,7 @@
 			<ACard title="Card title" subtitle="Chocolate cake tiramisu donut"
 				text="Ice cream sweet pie pie dessert sweet danish. Jelly jelly beans cupcake jelly-o chocolate bonbon chocolate bar." />
 
-			<ACard class="relative" color="danger" variant="fill" title="Card title"
+			<ACard class="relative shadow-2xl shadow-info shadow-opacity-40" color="info" variant="outline" title="Card title"
 				subtitle="Chocolate cake tiramisu donut">
 				<div class="a-card-body a-card-spacer">
 					<p class="text-sm">
