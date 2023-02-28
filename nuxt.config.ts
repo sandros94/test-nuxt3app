@@ -17,6 +17,11 @@ export default({
     css: [
         '@anu-vue/preset-theme-default/dist/style.css'
     ],
+    unocss: {
+        uno: true,
+        icons: true,
+        preflight: true,
+    },
     colorMode: {
         preference: 'system',
         fallback: 'light',
