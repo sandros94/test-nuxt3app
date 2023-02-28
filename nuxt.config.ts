@@ -11,6 +11,10 @@ export default({
             crawlLinks: true,
         },
     },
+    sourcemap: {
+        server: true,
+        client: false,
+    },
     typescript: {
         shim: false
     },
