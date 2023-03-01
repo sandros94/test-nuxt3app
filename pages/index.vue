@@ -7,9 +7,9 @@
 		</div>
 		<div class="m-6 justify-center">
 			<div class="flex justify-center mb-2">
-				<ASwitch color="info" v-model="themeToggle" />
+				<ASwitch v-model="val" />
 			</div>
-			<p class="text-warm-gray-500">themeToggle: <span class="color-info">{{ themeToggle }}</span> {{ typeof themeToggle }}</p>
+			<p class="text-warm-gray-500">val: <span class="color-info">{{ val }}</span> {{ typeof val }}</p>
 		</div>
 		<div class="m-6 text-warm-gray-500">
 			<p>colorMode.preference: <span class="color-info">{{ colorMode.preference }}</span> {{ typeof colorMode.preference }}</p>
@@ -32,9 +32,9 @@ body {
 
 <script setup>
 const colorMode = useColorMode();
-const themeToggle = ref(colorMode.value === 'dark');
+const val = ref(colorMode.value === 'dark');
 
-watch(themeToggle, (newValue) => {
+watch(val, (newValue) => {
 	colorMode.preference = newValue ? 'dark' : 'light'
 })
 </script>
