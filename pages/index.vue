@@ -1,51 +1,19 @@
 <template>
-	<div class="container p-6 mx-auto">
-		<!-- Buttons -->
-		<div class="w-full flex flex-wrap justify-between item-center mb-8">
-			<div class="flex flex-wrap gap-4">
-				<ABtn>Primary</ABtn>
-
-				<ABtn color="secondary">Secondary</ABtn>
-
-				<ABtn color="success"> Success </ABtn>
-
-				<ABtn color="info"> Info </ABtn>
-
-				<ABtn color="warning"> Warning </ABtn>
-
-				<ABtn color="danger"> Danger </ABtn>
-			</div>
-			<div class="flex flex-wrap gap-4 my-8">
-				<ARadio v-model="colorMode.preference" value="system" label="System" />
-				<ARadio v-model="colorMode.preference" value="light" label="Light" />
-				<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
-			</div>
-			<ASwitch v-model="themeToggle" />
-			<input v-model="themeToggle" type="checkbox" />
-			<Test v-model="colorMode.preference" true-value="dark" false-value="light" />
-			<input v-model="colorMode.preference" true-value="dark" false-value="light" type="checkbox" />
+	<div class="w-full h-[100svh] flex flex-col items-center justify-center text-center">
+		<div class="flex flex-wrap gap-4 m-6">
+			<ARadio v-model="colorMode.preference" value="system" label="System" />
+			<ARadio v-model="colorMode.preference" value="light" label="Light" />
+			<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
 		</div>
-
-		<h1>colorMode.value: {{ colorMode.value }}</h1>
-		<h1>colorMode.preference: {{ colorMode.preference }}</h1>
-		<p>Is Dark? {{ colorMode.value == 'dark' }} {{ typeof colorMode.value }}</p>
-		<p>themeToggle: {{ themeToggle }} {{ typeof themeToggle }}</p>
-
-		<!-- Cards -->
-		<div class="grid-row sm:grid-cols-2 cards-demo-container">
-			<!-- 👉 Using props -->
-			<ACard title="Card title" subtitle="Chocolate cake tiramisu donut"
-				text="Ice cream sweet pie pie dessert sweet danish. Jelly jelly beans cupcake jelly-o chocolate bonbon chocolate bar." />
-
-			<ACard class="relative shadow-2xl shadow-info shadow-opacity-40" color="info" variant="outline" title="Card title"
-				subtitle="Chocolate cake tiramisu donut">
-				<div class="a-card-body a-card-spacer">
-					<p class="text-sm">
-						Ice cream sweet pie pie dessert sweet danish. Jelly jelly beans
-						cupcake jelly-o chocolate bonbon chocolate bar.
-					</p>
-				</div>
-			</ACard>
+		<div class="m-6 justify-center">
+			<div class="flex justify-center mb-2">
+				<ASwitch color="info" v-model="themeToggle" />
+			</div>
+			<p class="text-warm-gray-500">themeToggle: <span class="color-info">{{ themeToggle }}</span> {{ typeof themeToggle }}</p>
+		</div>
+		<div class="m-6 text-warm-gray-500">
+			<p>colorMode.preference: <span class="color-info">{{ colorMode.preference }}</span> {{ typeof colorMode.preference }}</p>
+			<p>colorMode.value: <span class="color-info">{{ colorMode.value }}</span> {{ typeof colorMode.value }}</p>
 		</div>
 	</div>
 </template>
