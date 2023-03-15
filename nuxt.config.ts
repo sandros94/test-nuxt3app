@@ -3,7 +3,8 @@ export default({
     modules: [
         '@anu-vue/nuxt',
         '@unocss/nuxt',
-        '@nuxtjs/color-mode'
+        '@nuxtjs/color-mode',
+        'nuxt-icon'
     ],
     nitro: {
         compressPublicAssets: true,
