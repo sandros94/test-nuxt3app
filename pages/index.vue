@@ -5,6 +5,12 @@
 			<ARadio v-model="colorMode.preference" value="light" label="Light" />
 			<ARadio v-model="colorMode.preference" value="dark" label="Dark" />
 		</div>
+		<div>
+			<button @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'" >
+				<p v-if="$colorMode.value === 'light'">il tema è chiaro <Icon name="ph:sun"/></p>
+				<p v-else>il tema è scuro <Icon name="ph:moon" color="green"/></p>
+			</button>
+		</div>
 		<div class="m-6 justify-center">
 			<div class="flex justify-center mb-2">
 				<ASwitch v-model="val" />
