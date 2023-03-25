@@ -4,7 +4,6 @@ export default({
         '@anu-vue/nuxt',
         '@unocss/nuxt',
         '@nuxtjs/color-mode',
-        'nuxt-icon'
     ],
     nitro: {
         compressPublicAssets: true,

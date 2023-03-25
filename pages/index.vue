@@ -7,19 +7,22 @@
 		</div>
 		<div>
 			<button @click="$colorMode.preference = $colorMode.value === 'dark' ? 'light' : 'dark'" >
-				<p v-if="$colorMode.value === 'light'">il tema è chiaro <Icon name="ph:sun"/></p>
-				<p v-else>il tema è scuro <Icon name="ph:moon" color="green"/></p>
+				<p v-if="$colorMode.value === 'light'">il tema è chiaro <span class="i-ph:sun"></span></p>
+				<p v-else>il tema è scuro <span class="i-ph:moon"></span></p>
 			</button>
 		</div>
 		<div class="m-6 justify-center">
-			<div class="flex justify-center mb-2">
-				<ASwitch v-model="val" />
-			</div>
-			<p class="text-warm-gray-500">val: <span class="color-info">{{ val }}</span> {{ typeof val }}</p>
+			<ClientOnly>
+				<template #fallback>
+					<ASwitch v-model="off" off-icon="i-svg-spinners:clock"/>
+				</template>
+				<ASwitch v-model="switchTheme" off-icon="i-ph:sun" on-icon="i-ph:moon"/>
+			</ClientOnly>
+			<p class="text-warm-gray-500">switchTheme: <span class="color-info">{{ switchTheme }}</span> {{ typeof switchTheme }}</p>
 		</div>
 		<div class="m-6 text-warm-gray-500">
-			<p>colorMode.preference: <span class="color-info">{{ colorMode.preference }}</span> {{ typeof colorMode.preference }}</p>
 			<p>colorMode.value: <span class="color-info">{{ colorMode.value }}</span> {{ typeof colorMode.value }}</p>
+			<p>colorMode.preference: <span class="color-info">{{ colorMode.preference }}</span> {{ typeof colorMode.preference }}</p>
 		</div>
 	</div>
 </template>
@@ -38,9 +41,17 @@ body {
 
 <script setup>
 const colorMode = useColorMode();
-const val = ref(colorMode.value === 'dark');
-
-watch(val, (newValue) => {
-	colorMode.preference = newValue ? 'dark' : 'light'
-})
+const off = ref(false)
+const switchTheme = computed({
+      get: () => colorMode.value === 'dark',
+      set: (value) => {
+        if (colorMode.preference === 'system') {
+          // Set the opposite of the current system value
+          colorMode.preference = value ? 'dark' : 'light';
+        } else {
+          // Set the preference back to 'system'
+          colorMode.preference = 'system';
+        }
+	}
+});
 </script>
