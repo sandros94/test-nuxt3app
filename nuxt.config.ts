@@ -1,36 +1,16 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-export default({
+export default defineNuxtConfig({
     modules: [
+        
         '@anu-vue/nuxt',
-        '@unocss/nuxt',
-        '@nuxtjs/color-mode',
     ],
-    nitro: {
-        compressPublicAssets: true,
-        prerender: {
-            crawlLinks: true,
-        },
-    },
-    sourcemap: {
-        server: true,
-        client: false,
-    },
-    typescript: {
-        shim: false
-    },
+    extends: [
+        'github:digitoolmedia/first#stable',
+        'nuxt-seo-kit',
+    ],
     css: [
         '@anu-vue/preset-theme-default/dist/style.css'
     ],
-    unocss: {
-        uno: true,
-        icons: true,
-        preflight: true,
-    },
-    colorMode: {
-        preference: 'system',
-        fallback: 'light',
-        classSuffix: '',
-    },
     app: {
         head: {
             title: 'Website',
@@ -38,5 +18,13 @@ export default({
                 lang: 'en'
             }
         },
-    }
+    },
+    runtimeConfig: {
+        public: {
+          siteUrl: `https://${process.env.PUBLIC_SITE_URL}` || 'https://example.com',
+          siteName: 'Website',
+          siteDescription: 'Welcome to my awesome website!',
+          language: 'en', // prefer more explicit language codes like `en-AU` over `en`
+        }
+    },
 });
