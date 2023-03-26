@@ -1,5 +1,7 @@
 # test-nuxt3app
 
+# This README needs an update 🙄
+
 ## What am I looking at?
 
 This is a small sandbox/boilerplate for a minimal nuxt app.
