@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-full flex flex-col items-center justify-center text-center">
+	<div class="w-full h-full m-auto flex flex-col items-center justify-center text-center">
 		<div class="flex flex-wrap gap-4 m-6">
 			<ARadio v-model="colorMode.preference" value="system" label="System" />
 			<ARadio v-model="colorMode.preference" value="light" label="Light" />
