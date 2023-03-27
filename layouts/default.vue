@@ -1,5 +1,5 @@
 <template>
-    <div class="min-h-[100vsh] flex flex-col">
+    <div class="min-h-[100svh] flex flex-col">
         <NuxtLoadingIndicator />
         <nav>
             <div class="flex justify-between m-auto py-4 px-10% text-black dark:text-white">
