@@ -18,9 +18,6 @@
 </template>
 
 <script setup>
-import ThemeSwitch from '~~/components/theme-switch.vue';
-
-
 </script>
 
 <style>
