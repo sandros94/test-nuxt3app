@@ -1,5 +1,5 @@
 <template>
-	<div class="w-full h-[100svh] flex flex-col items-center justify-center text-center">
+	<div class="w-full h-full flex flex-col items-center justify-center text-center">
 		<div class="flex flex-wrap gap-4 m-6">
 			<ARadio v-model="colorMode.preference" value="system" label="System" />
 			<ARadio v-model="colorMode.preference" value="light" label="Light" />
@@ -44,13 +44,16 @@ const colorMode = useColorMode();
 const off = ref(false)
 const switchTheme = computed({
       get: () => colorMode.value === 'dark',
-      set: (value) => {
-        if (colorMode.preference === 'system') {
-          // Set the opposite of the current system value
-          colorMode.preference = value ? 'dark' : 'light';
-        } else {
-          // Set the preference back to 'system'
-          colorMode.preference = 'system';
+      set: () => {
+        if (colorMode.preference === 'system' && colorMode.value === 'light') {
+          	// If current system is light, set to dark
+          	colorMode.preference = 'dark';
+        } else if (colorMode.preference === 'system' && colorMode.value === 'dark') {
+			// If current system is dark, set to light
+			colorMode.preference = 'light';
+		} else {
+          	// Else, set back to system
+          	colorMode.preference = 'system';
         }
 	}
 });
