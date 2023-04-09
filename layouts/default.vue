@@ -2,7 +2,7 @@
     <div class="min-h-[100svh] flex flex-col">
         <NuxtLoadingIndicator />
         <nav>
-            <div class="flex justify-between m-auto py-4 px-10% text-black dark:text-white">
+            <div class="flex justify-between items-center m-auto py-4 px-10% text-black dark:text-white">
                 <ContentNavigation v-slot="{ navigation }">
                     <ul class="flex gap-x-4 text-2xl">
                         <li class="hover:underline underline-black dark:underline-white" v-for="link of navigation" :key="link._path">
@@ -10,7 +10,10 @@
                         </li>
                     </ul>
                 </ContentNavigation>
-                <ThemeSwitch />
+                <div class="inline-flex gap-x-4 items-inherit">
+                    <UnoIcon class="i-svg-spinners:clock text-white"></UnoIcon>
+                    <ThemeSwitch />
+                </div>
             </div>
         </nav>
         <slot />
