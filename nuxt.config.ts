@@ -8,28 +8,9 @@ export default defineNuxtConfig({
         'github:digitoolmedia/first#stable',
         'nuxt-seo-kit',
     ],
-    unocss: {
-        uno: true,
-        attributify: true,
-        typography: true,
-        include: [/.*\/anu-vue\.js(.*)?$/, './**/*.vue', './**/*.md'],
-        icons: {
-          cdn: 'https://esm.sh/',
-          scale: 1.2,
-          extraProperties: {
-            display: 'inline-block',
-            'vertical-align': 'middle',
-            // ...
-          },
-        },
-        webFonts: {
-          fonts: {
-            sans: 'DM Sans',
-            serif: 'DM Serif Display',
-            mono: 'DM Mono',
-          },
-        },
-    },
+    css: [
+        '@anu-vue/preset-theme-default/dist/style.css'
+    ],
     app: {
         head: {
             title: 'Website',
