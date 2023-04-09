@@ -24,6 +24,28 @@ export default defineNuxtConfig({
     css: [
         '@unocss/reset/tailwind.css',
     ],
+    // unocss: {
+    //     uno: true,
+    //     attributify: true,
+    //     typography: true,
+    //     include: [/.*\/anu-vue\.js(.*)?$/, './**/*.vue', './**/*.md'],
+    //     icons: {
+    //       cdn: 'https://esm.sh/',
+    //       scale: 1.2,
+    //       extraProperties: {
+    //         display: 'inline-block',
+    //         'vertical-align': 'middle',
+    //         // ...
+    //       },
+    //     },
+    //     webFonts: {
+    //       fonts: {
+    //         sans: 'DM Sans',
+    //         serif: 'DM Serif Display',
+    //         mono: 'DM Mono',
+    //       },
+    //     },
+    // },
     content: {
         // https://content.nuxtjs.org/api/configuration
         highlight: {
