@@ -11,7 +11,7 @@
                     </ul>
                 </ContentNavigation>
                 <div class="inline-flex gap-x-4 items-inherit">
-                    <UnoIcon class="i-svg-spinners:clock text-white"></UnoIcon>
+                    <UnoIcon class="i-svg-spinners:clock text-gray-6 dark:text-white"></UnoIcon>
                     <ThemeSwitch />
                 </div>
             </div>
