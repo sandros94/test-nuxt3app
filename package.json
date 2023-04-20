@@ -23,6 +23,6 @@
         "nuxt-seo-kit": "^1.3.6"
     },
     "dependencies": {
-        "@anu-vue/nuxt": "^0.13.1"
+        "@anu-vue/nuxt-edge": "^0.13.2-rc.0-28025564.1da7fba"
     }
 }
