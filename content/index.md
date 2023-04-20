@@ -1,4 +1,4 @@
 # Home
 This is a demo page.
 
-And this is a link to a [test page](test-theme)
+Go [to this page](test-theme) for ASwitch and nuxt color-mode.

@@ -17,9 +17,9 @@ const switchTheme = computed({
             // If current system is light, set to dark
             colorMode.preference = 'dark';
         } else if (colorMode.preference === 'system' && colorMode.value === 'dark') {
-	    // If current system is dark, set to light
-	    colorMode.preference = 'light';
-	} else {
+	        // If current system is dark, set to light
+	        colorMode.preference = 'light';
+	    } else {
             // Else, set back to system
             colorMode.preference = 'system';
         }
