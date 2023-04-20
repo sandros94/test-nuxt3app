@@ -32,9 +32,8 @@ export default defineConfig({
         presetTypography(),
         presetWebFonts({
             fonts: {
-                sans: 'DM Sans',
-                serif: 'DM Serif Display',
-                mono: 'DM Mono',
+                sans: 'Jost:100,200,300,400,500,600,700,800,900',
+                mono: ['Fira Code:400,500,600,700', 'Fira Mono:400,500,600,700']
             },
         }),
         // anu-vue preset
