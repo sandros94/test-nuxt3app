@@ -25,11 +25,9 @@
 
 <style>
 body {
-    color: hsla(var(--a-base-c), 1.0);
     @apply bg-white dark:bg-#101010 font-sans;
 }
 h1, h2, h3, h4, h5, h6 {
-    color: inherit;
     @apply font-sans;
 }
 </style>
