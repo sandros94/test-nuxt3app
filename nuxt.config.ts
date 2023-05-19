@@ -7,7 +7,7 @@ export default defineNuxtConfig({
         '@nuxt/content',
         '@nuxt/devtools',
         '@vueuse/nuxt',
-        '@anu-vue/nuxt-edge',
+        '@anu-vue/nuxt',
     ],
     extends: [
         'nuxt-seo-kit',
