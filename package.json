@@ -4,6 +4,7 @@
         "node": ">=18.0.0 <19.0.0"
     },
     "scripts": {
+        "clear": "nuxt cleanup",
         "build": "nuxt build",
         "dev": "nuxt dev",
         "generate": "nuxt generate",
@@ -11,18 +12,8 @@
         "postinstall": "nuxt prepare"
     },
     "devDependencies": {
-        "@iconify-json/fluent-emoji-flat": "^1.1.10",
-        "@iconify-json/line-md": "^1.1.23",
-        "@iconify-json/logos": "^1.1.23",
-        "@iconify-json/ph": "^1.1.4",
-        "@iconify-json/svg-spinners": "^1.1.1",
-        "@nuxtjs/color-mode": "^3.2.0",
-        "@unocss/nuxt": "^0.50.1",
-        "@unocss/preset-icons": "^0.50.1",
-        "nuxt": "^3.2.3"
-    },
-    "dependencies": {
-        "@anu-vue/nuxt": "^0.12.0",
-        "@anu-vue/preset-theme-default": "^0.12.0"
+        "@nuxthq/ui": "^2.1.0",
+        "nuxt": "^3.5.1",
+        "nuxt-directus": "^5.3.0"
     }
 }

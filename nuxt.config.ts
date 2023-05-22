@@ -1,35 +1,17 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default({
     modules: [
-        '@anu-vue/nuxt',
-        '@unocss/nuxt',
-        '@nuxtjs/color-mode'
+        '@nuxthq/ui',
+        'nuxt-directus'
     ],
     nitro: {
         compressPublicAssets: true,
-        prerender: {
-            crawlLinks: true,
-        },
-    },
-    sourcemap: {
-        server: true,
-        client: false,
     },
     typescript: {
         shim: false
     },
-    css: [
-        '@anu-vue/preset-theme-default/dist/style.css'
-    ],
-    unocss: {
-        uno: true,
-        icons: true,
-        preflight: true,
-    },
-    colorMode: {
-        preference: 'system',
-        fallback: 'light',
-        classSuffix: '',
+    directus: {
+        url: `http://localhost:8055/`,
     },
     app: {
         head: {

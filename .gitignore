@@ -7,9 +7,10 @@ package-lock.json
 .cache
 .output
 *.env
-!.env
 dist
-.vscode
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
 
 # OSX
 .DS_Store
