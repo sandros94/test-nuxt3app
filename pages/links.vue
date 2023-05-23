@@ -15,18 +15,23 @@
 </style>
 
 <script setup scoped>
-const { data: links, pending, refresh } = useAsyncData(async () => {
-    const { getItems } = useDirectusItems()
-    return await getItems({
-        collection: 'links',
-        params: {
-            fields: ['id', 'name', 'link', 'date', 'status'],
-            filter: {
-                status: 'visible',
+const { data: links, pending, refresh, error } = useAsyncData(async () => {
+    try {
+        const { getItems } = useDirectusItems()
+        return await getItems({
+            collection: 'links',
+            params: {
+                fields: ['id', 'name', 'link', 'date', 'status'],
+                filter: {
+                    status: 'visible',
+                },
+                sort: ['-date'],
             },
-            sort: ['-date'],
-        },
-    })
+        })
+    } catch (err) {
+        console.error(err)
+        throw err
+    }
 })
 
 const refreshData = () => {
