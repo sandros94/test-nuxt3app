@@ -4,6 +4,7 @@ services:
   directus:
     image: directus/directus:10.1
 
+    # user: node
     # command: sh -c "node /directus/cli.js bootstrap && node /directus/cli.js start && node /directus/cli.js schema apply --yes /directus/schema.yml"
 
     volumes:
