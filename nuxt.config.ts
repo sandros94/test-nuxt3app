@@ -11,7 +11,7 @@ export default({
         shim: false
     },
     directus: {
-        url: `http://localhost:8055/`,
+        url: process.env.DIRECTUS_URL ? (process.env.DIRECTUS_URL.match(/^(?:http(s)?:\/\/)/) ? process.env.DIRECTUS_URL : `http://${process.env.DIRECTUS_URL}`) : 'http://localhost:8055',
     },
     app: {
         head: {
